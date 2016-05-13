@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>forticlient</id>
+    <title>forticlient (Install)</title>
+    <version>5.4.0780</version>
+    <authors>Fortinet</authors>
+    <owners>Fortinet</owners>
+    <summary>Fortinet AV/APP/IPS/VPN client</summary>
+    <description>__REPLACE__MarkDown_Okay 
+    </description>
+    <projectUrl>http://forticlient.com/</projectUrl>
+    <packageSourceUrl>http://forticlient.com/</packageSourceUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>forticlient admin SPACE_SEPARATED</tags>
+    <copyright>Fortinet</copyright>
+    <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/forticlient.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
