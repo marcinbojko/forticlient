@@ -32,7 +32,8 @@ if ($key.Count -eq 1) {
       $file = ''
     }
 
-    Uninstall-ChocolateyPackage -PackageName $packageName `
+Start-Process -Wait $file
+    #Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
                                 -SilentArgs "$silentArgs" `
                                 -ValidExitCodes $validExitCodes `
