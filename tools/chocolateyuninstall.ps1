@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop';
 $packageName = 'forticlient'
 $softwareName = 'FortiClient*'
 $installerType = 'MSI'
-$uninstallGuid =  '{B5E0B33F-91D4-408B-BE40-46BCA75F3914}'
+$ProductCode =  "{B5E0B33F-91D4-408B-BE40-46BCA75F3914}"
 
 $silentArgs = '/qn /norestart'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
@@ -32,12 +32,11 @@ if ($key.Count -eq 1) {
       $file = ''
     }
 
-Start-Process -Wait $file
-    #Uninstall-ChocolateyPackage -PackageName $packageName `
+    Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
                                 -SilentArgs "$silentArgs" `
                                 -ValidExitCodes $validExitCodes `
-                                -File "msiexec /x $unistallGuid"
+                                -File "$ProductCode $silentArgs"
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
