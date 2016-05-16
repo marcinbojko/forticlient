@@ -9,12 +9,11 @@
     <authors>Fortinet</authors>
     <owners>Fortinet</owners>
     <summary>Fortinet AV/APP/IPS/VPN client</summary>
-    <description>__REPLACE__MarkDown_Okay 
-    </description>
+    <description> "FortiClient extends the power of FortiGate's Unified threat management to endpoints on your network. Desktops, laptops, tablets and smartphones, FortiClient enables every device - local or remote, stationary or mobile - to integrate with your FortiGate. With no per-seat license fees, FortiClient takes the headaches out of managing multiple endpoints so your users and guests can work efficiently anywhere, without compromising your security. It's the end-point solution for your FortiGate network."</description>
     <projectUrl>http://forticlient.com/</projectUrl>
     <packageSourceUrl>http://forticlient.com/</packageSourceUrl>
     <!--<projectSourceUrl></projectSourceUrl>
-    <docsUrl></docsUrl>
+    <docsUrl>http://docs.fortinet.com/forticlient/admin-guides</docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
     <tags>forticlient admin SPACE_SEPARATED</tags>
@@ -26,7 +25,7 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+    <releaseNotes>FortiClient extends the power of FortiGate's Unified threat management to endpoints on your network. Desktops, laptops, tablets and smartphones, FortiClient enables every device - local or remote, stationary or mobile - to integrate with your FortiGate. With no per-seat license fees, FortiClient takes the headaches out of managing multiple endpoints so your users and guests can work efficiently anywhere, without compromising your security. It's the end-point solution for your FortiGate network.</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
