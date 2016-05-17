@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 $packageName = 'forticlient'
 $softwareName = 'FortiClient*'
 $installerType = 'MSI'
-$UninstallGuid =  '{B5E0B33F-91D4-408B-BE40-46BCA75F3914}'
+$UninstallGuid =  '{B611B858-9363-42FC-AE47-3430D54CCE1B}'
 
 $silentArgs = '/qn /norestart'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
