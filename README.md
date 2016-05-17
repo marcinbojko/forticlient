@@ -5,9 +5,15 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 Features
 --------
 * Install & uninstall via Chocolatey
-* Requires \\office.eleader.biz\packages\choco\forticlient*.msi
+* [DEPRECATED] Requires \\\\office.eleader.biz\packages\choco\forticlient*.msi 
+* Requires source path to MyGet
 
-#### 2016-05-15 Wersja 5.4.780 
+#### 2016-05-17 Build 5.4.0822
+* first interim build 5.4.0822
+* first build with standalone Fortinet MSI installer
+* included config for eLeader Fortigate connection
+
+#### 2016-05-15 Build 5.4.0780 
 * first stable 5.4
 * uninstall omits Uninstall-ChocolateyPackage due to erros
 
@@ -15,6 +21,11 @@ Features
 ## Direct
 ``` 
 choco install forticlient -source https://www.myget.org/F/eleader/ 
+```
+or with added source
+```
+choco source add -n=eLeader -s"https://www.myget.org/F/eleader/api/v2" --priority=10
+choco install forticlient
 ```
 ## YAML
 ```
