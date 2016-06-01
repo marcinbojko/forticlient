@@ -5,8 +5,13 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 Features
 --------
 * Install & uninstall via Chocolatey
-* [DEPRECATED] Requires \\\\office.eleader.biz\packages\choco\forticlient*.msi 
+* [NEW] Tests local source (if exists) to prevent dowloading package from Internet 
+	* \\\\office.eleader.biz\packages\choco\forticlient*.msi 
 * Requires source path to MyGet
+
+#### 2016-05-31 Build 5.4.0822
+* first build with double source (local or remote) instalation
+* no change to package binary version (only source)
 
 #### 2016-05-17 Build 5.4.0822
 * first interim build 5.4.0822

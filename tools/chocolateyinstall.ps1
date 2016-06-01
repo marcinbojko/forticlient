@@ -4,19 +4,38 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'forticlient'
 $scriptPath =  $(Split-Path $MyInvocation.MyCommand.Path)
-$fileFullPath = Join-Path $scriptPath 'FortiClient.msi'
-$fileFullPathMST = Join-Path $scriptPath 'FortiClient.mst'
+$url_local  =  "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0822.msi"
+$url_remote =  "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0822.msi"
+$url_local_trans  =  "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0822.mst"
+$url_remote_trans =  "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0822.mst"
+$url        = ""
+$url_trans  = ""
+$checksum = "8a9cedb30158a5d420f8f357ede6b6de"
+
+# Let's check if should we use local or remote install source
+$statusCode = Test-Path $url_local 
+if ($statusCode) {
+                    $url=$url_local
+                    $url_trans=$url_local_trans    
+                }
+    else {
+        $url=$url_remote
+        $url_trans=$url_remote_trans
+    }
+# Someone has won ;)
 
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`" TRANSFORMS=$fileFullPathMST"
+  silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`" TRANSFORMS=$url_trans"
   validExitCodes= @(0, 3010, 1641)
-  file          = $fileFullPath
+  url           = $url
+  checksumType  = 'md5'
+  checksum      = $checksum
 }
 
 try {
-  Install-ChocolateyInstallPackage @packageArgs
+  Install-ChocolateyPackage @packageArgs
 } catch {
   Write-ChocolateyFailure $packageName $($_.Exception.Message)
   throw

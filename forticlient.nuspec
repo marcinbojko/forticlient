@@ -16,7 +16,7 @@
     <docsUrl>http://docs.fortinet.com/forticlient/admin-guides</docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>forticlient admin SPACE_SEPARATED</tags>
+    <tags>forticlient admin antivirus ips eleader</tags>
     <copyright>Fortinet</copyright>
     <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
