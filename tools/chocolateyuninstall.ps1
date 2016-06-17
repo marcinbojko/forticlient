@@ -1,4 +1,4 @@
-﻿
+
 $ErrorActionPreference = 'Stop';
 
 $packageName = 'forticlient'
@@ -6,7 +6,7 @@ $softwareName = 'FortiClient*'
 $installerType = 'MSI'
 $UninstallGuid =  '{B611B858-9363-42FC-AE47-3430D54CCE1B}'
 
-$silentArgs = '/qn /norestart'
+$silentArgs = '/qn /norestart /l*v plik.txt'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)
@@ -21,8 +21,11 @@ $key = Get-ItemProperty -Path @($machine_key6432,$machine_key, $local_key) -Erro
 
 if ($key.Count -eq 1) {
    
-    Start-Process -FilePath msiexec -ArgumentList "/x $UninstallGuid $silentArgs" -Wait
-   
+  if ($validExitCodes -NotContains (Start-Process -FilePath msiexec -ArgumentList "/x $UninstallGuid $silentArgs" -Wait -Passthru).ExitCode)
+        { 
+            Throw "Probably registered, try to force unregistering"
+        }
+
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
   write-host $key.Count

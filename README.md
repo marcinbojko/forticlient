@@ -9,7 +9,13 @@ Features
 	* \\\\office.eleader.biz\packages\choco\forticlient*.msi 
 * Requires source path to MyGet
 
-#### 2016-05-31 Build 5.4.0822
+
+#### 2016-06-17 Build 5.4.0837 (interim)
+* improved logic in uninstalling registered Forticlient (now, throw an error when uninstall fails)
+* switch to another interim build with custom config
+* added 'REINSTALLMODE=vomus REINSTALL=ALL ' to MSI install parameters (minor/major upgrade handling feature)
+
+#### 2016-05-31 Build 5.4.0822 (interim)
 * first build with double source (local or remote) instalation
 * no change to package binary version (only source)
 
