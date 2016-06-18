@@ -6,7 +6,7 @@ $softwareName = 'FortiClient*'
 $installerType = 'MSI'
 $UninstallGuid =  '{B611B858-9363-42FC-AE47-3430D54CCE1B}'
 
-$silentArgs = '/qn /norestart /l*v plik.txt'
+$silentArgs = '/qn /norestart'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)

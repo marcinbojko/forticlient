@@ -10,6 +10,7 @@ $url_remote_trans   = "https://dl.dropboxusercontent.com/u/6066664/choco/forticl
 $url                = ""
 $url_trans          = ""
 $checksum           = "acf2fc841a6f28d5dfb7de2a9db03083"
+$logfile            = "$env:TEMP\chocolatey\$($packageName).MsiInstall.log"
 
 # Let's check if should we use local or remote install source
 $statusCode = Test-Path $url_local 
@@ -23,10 +24,24 @@ if ($statusCode) {
     }
 # Someone has won ;)
 
+
+#Let's check your TEMP derectory
+
+$statusCode = Test-Path $logfile 
+if ($statusCode) {
+                        
+                }
+    else {
+        $localfile="$env:WINDIR\TEMP\chocolatey\$($packageName).MsiInstall.log"
+        
+    }
+
+
+
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  silentArgs    = "/qn /norestart REINSTALLMODE=vomus REINSTALL=ALL /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`" TRANSFORMS=$url_trans"
+  silentArgs    = "/qn /norestart REINSTALLMODE=vomus REINSTALL=ALL /l*v `"$logfile`" TRANSFORMS=$url_trans"
   validExitCodes= @(0, 3010, 1641)
   url           = $url
   checksumType  = 'md5'

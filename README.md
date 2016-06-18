@@ -10,6 +10,9 @@ Features
 * Requires source path to MyGet
 
 
+#### 2016-06-18 Build 5.4.0837 (interim)
+* improved $env:TEMP logic, with Choco 0.9.10 path contained double 'chocolatey' reference - bug https://github.com/chocolatey/choco/commit/a9519b513b926255ad5bc35cf42b5e811ed77447
+
 #### 2016-06-17 Build 5.4.0837 (interim)
 * improved logic in uninstalling registered Forticlient (now, throw an error when uninstall fails)
 * switch to another interim build with custom config
