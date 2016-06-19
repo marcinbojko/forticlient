@@ -10,7 +10,8 @@ $url_remote_trans   = "https://dl.dropboxusercontent.com/u/6066664/choco/forticl
 $url                = ""
 $url_trans          = ""
 $checksum           = "acf2fc841a6f28d5dfb7de2a9db03083"
-$logfile            = "$env:TEMP\chocolatey\$($packageName).MsiInstall.log"
+$logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
+$logdir             = "$env:TEMP\chocolatey\$($packageName)"
 
 # Let's check if should we use local or remote install source
 $statusCode = Test-Path $url_local 
@@ -27,12 +28,12 @@ if ($statusCode) {
 
 #Let's check your TEMP derectory
 
-$statusCode = Test-Path $logfile 
+$statusCode = Test-Path $logdir
 if ($statusCode) {
                         
                 }
     else {
-        $localfile="$env:WINDIR\TEMP\chocolatey\$($packageName).MsiInstall.log"
+        $logfile="$env:WINDIR\TEMP\chocolatey\$($packageName).MsiInstall.log"
         
     }
 
