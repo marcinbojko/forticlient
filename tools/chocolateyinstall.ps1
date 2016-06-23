@@ -3,13 +3,13 @@ $ErrorActionPreference = 'Stop';
 
 $packageName        = 'forticlient'
 $scriptPath         = $(Split-Path $MyInvocation.MyCommand.Path)
-$url_local          = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0837.msi"
-$url_remote         = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0837.msi"
-$url_local_trans    = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0837.mst"
-$url_remote_trans   = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0837.mst"
+$url_local          = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0839.msi"
+$url_remote         = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0839.msi"
+$url_local_trans    = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0839.mst"
+$url_remote_trans   = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0839.mst"
 $url                = ""
 $url_trans          = ""
-$checksum           = "acf2fc841a6f28d5dfb7de2a9db03083"
+$checksum           = "4fc356faa755b53d422f0d7d8971b8de"
 $logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
 $logdir             = "$env:TEMP\chocolatey\$($packageName)"
 

@@ -9,6 +9,9 @@ Features
 	* \\\\office.eleader.biz\packages\choco\forticlient*.msi 
 * Requires source path to MyGet
 
+#### 2016-06-23 Build 5.4.0839 (interim)
+* another interim
+* rebuild mst file for eLeader config
 
 #### 2016-06-18 Build 5.4.0837 (interim)
 * improved $env:TEMP logic, with Choco 0.9.10 path contained double 'chocolatey' reference - bug https://github.com/chocolatey/choco/commit/a9519b513b926255ad5bc35cf42b5e811ed77447
