@@ -14,7 +14,7 @@ Features
 #### 2016-06-27 Build 5.4.0840 (5.4.1 GA)
 * first GA in line of 5.4.1 builds
 * added fix for SSL VPN DNS
-```xml
+```
 <sslvpn> 
  <options> 
   <dnscache_service_control>2</dnscache_service_control> 
