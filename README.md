@@ -8,6 +8,21 @@ Features
 * [NEW] Tests local source (if exists) to prevent dowloading package from Internet 
 	* \\\\office.eleader.biz\packages\choco\forticlient*.msi 
 * Requires source path to MyGet
+* Supports ONLY 64-bit version
+
+
+#### 2016-06-27 Build 5.4.0840 (5.4.1 GA)
+* first GA in line of 5.4.1 builds
+* added fix for SSL VPN DNS
+```xml
+<sslvpn> 
+ <options> 
+  <dnscache_service_control>2</dnscache_service_control> 
+ </options>
+</sslvpn>
+```
+
+
 
 #### 2016-06-23 Build 5.4.0839 (interim)
 * another interim
