@@ -12,7 +12,8 @@ $url_trans          = ""
 $checksum           = "7231b87f097edfccaa2f70e87f71be9c"
 $logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
 $logdir             = "$env:TEMP\chocolatey\$($packageName)"
-
+$killexec           = 0
+$killexecprocess    = ""
 # Let's check if should we use local or remote install source
 $statusCode = Test-Path $url_local 
 if ($statusCode) {
@@ -36,8 +37,6 @@ if ($statusCode) {
         
     }
 
-
-
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
@@ -48,13 +47,12 @@ $packageArgs = @{
   checksum      = $checksum
 }
 
-try {
-  Install-ChocolateyPackage @packageArgs
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
-}
+# Should we kill some exec ?
+if ($killexec) {
+  Stop-Process -processname $killexecprocess -force
+  } 
 
+  Install-ChocolateyPackage @packageArgs
 
 
 

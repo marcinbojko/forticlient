@@ -23,7 +23,7 @@ if ($key.Count -eq 1) {
    
   if ($validExitCodes -NotContains (Start-Process -FilePath msiexec -ArgumentList "/x $UninstallGuid $silentArgs" -Wait -Passthru).ExitCode)
         { 
-            Throw "Probably registered, try to force unregistering"
+            Throw " Forticlient is probably registered, try to force unregistering/disable complance"
         }
 
 } elseif ($key.Count -eq 0) {

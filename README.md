@@ -10,6 +10,11 @@ Features
 * Requires source path to MyGet
 * Supports ONLY 64-bit version
 
+#### 2016-08-02 Build 5.4.0840 (5.4.1 GA)
+* removed Write-ChocolateySuccess/Failure according to new design base
+* adding option to kill exec before attempting to install/upgrade
+* updated README.md
+* package rebuilt
 
 #### 2016-06-27 Build 5.4.0840 (5.4.1 GA)
 * first GA in line of 5.4.1 builds
@@ -21,8 +26,6 @@ Features
  </options>
 </sslvpn>
 ```
-
-
 
 #### 2016-06-23 Build 5.4.0839 (interim)
 * another interim
