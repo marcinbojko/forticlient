@@ -10,6 +10,9 @@ Features
 * Requires source path to MyGet
 * Supports ONLY 64-bit version
 
+#### 2016-08-11 Build 5.4.1.0843 (5.4.1 Interim)
+* version 5.4.1.0843
+
 #### 2016-08-02 Build 5.4.0840 (5.4.1 GA)
 * removed Write-ChocolateySuccess/Failure according to new design base
 * adding option to kill exec before attempting to install/upgrade
