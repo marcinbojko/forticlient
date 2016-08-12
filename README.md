@@ -9,6 +9,7 @@ Features
 	* \\\\office.eleader.biz\packages\choco\forticlient*.msi 
 * Requires source path to MyGet
 * Supports ONLY 64-bit version
+* Includes interim versions
 
 #### 2016-08-11 Build 5.4.0843 (5.4.1 Interim)
 * version 5.4.0843
