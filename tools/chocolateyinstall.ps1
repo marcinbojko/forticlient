@@ -3,13 +3,13 @@ $ErrorActionPreference = 'Stop';
 
 $packageName        = 'forticlient'
 $scriptPath         = $(Split-Path $MyInvocation.MyCommand.Path)
-$url_local          = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0843.msi"
-$url_remote         = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0843.msi"
-$url_local_trans    = "\\office.eleader.biz\wymiana\packages\choco\FortiClient-5.4.0843.mst"
-$url_remote_trans   = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0843.mst"
+$url_local          = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0842.msi"
+$url_remote         = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.4.0842.msi"
+$url_local_trans    = ""
+$url_remote_trans   = ""
 $url                = ""
 $url_trans          = ""
-$checksum           = "987a477f1ba4845f8429740db53dd999"
+$checksum           = "7512d7125e76f158f1a755e92975a78407319811ae55b27f40b31917648e25db"
 $logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
 $logdir             = "$env:TEMP\chocolatey\$($packageName)"
 $killexec           = 0
@@ -40,10 +40,11 @@ if ($statusCode) {
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  silentArgs    = "/qn /norestart REINSTALLMODE=vomus REINSTALL=ALL /l*v `"$logfile`" TRANSFORMS=$url_trans"
+# silentArgs    = "/qn /norestart REINSTALLMODE=vomus REINSTALL=ALL /l*v `"$logfile`" TRANSFORMS=$url_trans"
+  silentArgs    = "/qn /norestart REINSTALLMODE=vomus REINSTALL=ALL /l*v `"$logfile`""
   validExitCodes= @(0, 3010, 1641)
   url           = $url
-  checksumType  = 'md5'
+  checksumType  = 'sha256'
   checksum      = $checksum
 }
 
