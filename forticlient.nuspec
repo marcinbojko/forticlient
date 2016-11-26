@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>forticlient</id>
     <title>forticlient (Install)</title>
-    <version>5.4.0860</version>
+    <version>5.4.2.0860</version>
     <authors>Fortinet</authors>
     <owners>Fortinet</owners>
     <summary>Fortinet AV/APP/IPS/VPN client</summary>
@@ -16,7 +16,7 @@
     <!--<projectSourceUrl></projectSourceUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>forticlient admin antivirus ips eleader</tags>
+    <tags>forticlient admin antivirus ips</tags>
     <copyright>Fortinet</copyright>
     <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -34,6 +34,10 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 * Includes interim versions
 
 ## Changelog
+
+### 2016-11-25 Build 5.4.2.0860 (GA)
+
+* change version numbering to match Fortinet's
 
 ### 2016-10-16 Build 5.4.2.0860 (GA)
 
@@ -95,7 +99,7 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 ### Direct
 
 ```cmd
-choco install forticlient -source https://www.myget.org/F/eleader/ 
+choco install forticlient -source https://www.myget.org/F/public-choco/
 ```
 
 or with added source
@@ -112,7 +116,7 @@ forticlient:
   ensure: latest
   uninstall_options: "--force --all-versions"
   provider: chocolatey
-  source: https://www.myget.org/F/eleader/
+  source: https://www.myget.org/F/public-choco/
 ```
 </releaseNotes>
   </metadata>
