@@ -5,9 +5,9 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>forticlient</id>
     <title>forticlient (Install)</title>
-    <version>5.4.2.0860</version>
+    <version>5.4.3.0870</version>
     <authors>Fortinet</authors>
-    <owners>Fortinet</owners>
+    <owners>Marcin Bojko</owners>
     <summary>Fortinet AV/APP/IPS/VPN client</summary>
     <description> "FortiClient extends the power of FortiGate's Unified threat management to endpoints on your network. Desktops, laptops, tablets and smartphones, FortiClient enables every device - local or remote, stationary or mobile - to integrate with your FortiGate. With no per-seat license fees, FortiClient takes the headaches out of managing multiple endpoints so your users and guests can work efficiently anywhere, without compromising your security. It's the end-point solution for your FortiGate network."</description>
     <projectUrl>http://forticlient.com/</projectUrl>
@@ -20,7 +20,8 @@
     <copyright>Fortinet</copyright>
     <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes># Forticlient package
+    <releaseNotes>
+# Forticlient package
 
 ## Description
 
@@ -34,6 +35,12 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 * Includes interim versions
 
 ## Changelog
+
+### 2017-03-10 Build 5.4.3.0870 (GA)
+
+* version 5.4.3.0870 GA
+* VirusTotal link - [https://www.virustotal.com/pl/file/b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb/analysis/1489145415/](https://www.virustotal.com/pl/file/b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb/analysis/1489145415/)
+* SHA256 - b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb
 
 ### 2016-11-25 Build 5.4.2.0860 (GA)
 

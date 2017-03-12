@@ -13,6 +13,12 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 
 ## Changelog
 
+### 2017-03-12 Build 5.4.3.0870 (GA)
+
+* version 5.4.3.0870 GA
+* VirusTotal link - [https://www.virustotal.com/pl/file/b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb/analysis/1489145415/](https://www.virustotal.com/pl/file/b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb/analysis/1489145415/)
+* SHA256 - b32e0f5330f007f6ad541c73737408886150cf425864f4a15dee176f11ec14eb
+
 ### 2016-11-25 Build 5.4.2.0860 (GA)
 
 * change version numbering to match Fortinet's
@@ -85,7 +91,7 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 ### Direct
 
 ```cmd
-choco install forticlient -source https://www.myget.org/F/eleader/ 
+choco install forticlient -source https://www.myget.org/F/public-choco
 ```
 
 or with added source
@@ -102,5 +108,12 @@ forticlient:
   ensure: latest
   uninstall_options: "--force --all-versions"
   provider: chocolatey
-  source: https://www.myget.org/F/eleader/
+  source: https://www.myget.org/F/public-choco/
+```
+
+or
+
+```yaml
+forticlient:
+  ensure: latest
 ```
