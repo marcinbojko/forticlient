@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName        = 'forticlient'
 $scriptPath         = $(Split-Path $MyInvocation.MyCommand.Path)
-$url_local          = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.6.0.1075.msi"
-$url_remote         = "https://dl.dropboxusercontent.com/u/6066664/choco/forticlient/FortiClient-5.6.0.1075.msi"
+$url_local          = "https://s3-eu-west-1.amazonaws.com/public-choco/forticlient/FortiClient-5.6.0.1075.msi"
+$url_remote         = "https://s3-eu-west-1.amazonaws.com/public-choco/forticlient/FortiClient-5.6.0.1075.msi"
 $url_local_trans    = ""
 $url_remote_trans   = ""
 $url                = ""
