@@ -13,6 +13,11 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 
 ## Changelog
 
+### 2017-11-22 Build 5.6.2.1117 (GA)
+
+* version 5.6.2.1117
+* VirusTotal link - [https://www.virustotal.com/#/file/b44bef47541e423fa8f3e22bb687f3e317e8df1b9735394e3f774a2b88d1678c/detection](https://www.virustotal.com/#/file/b44bef47541e423fa8f3e22bb687f3e317e8df1b9735394e3f774a2b88d1678c/detection)
+
 ### 2017-11-09 Build 5.6.1.1115 (GA)
 
 * version 5.6.1.1115
