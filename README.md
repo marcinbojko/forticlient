@@ -13,6 +13,10 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 
 ## Changelog
 
+### 2018-05-10 Build 5.6.6.1167 (GA) - reworked links
+* version 5.6.6.1167
+* switched to Google Cloud Storage for links
+
 ### 2018-01-26 Build 5.6.5.1149 interim
 
 * version 5.6.5.1149 interim

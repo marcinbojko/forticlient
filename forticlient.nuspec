@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>forticlient</id>
     <title>FortiClient</title>
-    <version>5.6.5.1149</version>
+    <version>5.6.6.1167</version>
     <authors>Fortinet</authors>
     <owners>Marcin Bojko</owners>
     <summary>Fortinet AV/APP/IPS/VPN client</summary>
@@ -19,6 +19,7 @@
     <tags>forticlient admin antivirus ips</tags>
     <copyright>Fortinet</copyright>
     <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
+    <iconUrl>https://github.com/marcinbojko/forticlient/raw/master/icons/forticlient.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
 # Forticlient package
@@ -35,6 +36,10 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 * Includes interim versions
 
 ## Changelog
+
+### 2018-05-10 Build 5.6.6.1167 (GA)
+* version 5.6.6.1167
+* switched to Google Cloud Storage for links
 
 ### 2018-01-26 Build 5.6.5.1149 interim
 
@@ -149,8 +154,6 @@ choco install forticlient
 ```yaml
 forticlient:
   ensure: latest
-  uninstall_options: "--force --all-versions"
-  provider: chocolatey
   source: https://www.myget.org/F/public-choco/
 ```
 </releaseNotes>
@@ -160,6 +163,7 @@ forticlient:
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="icons\**" target="icons" />
   </files>
 
 </package>
