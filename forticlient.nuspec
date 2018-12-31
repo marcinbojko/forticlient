@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>forticlient</id>
     <title>FortiClient</title>
-    <version>6.0.3.0155</version>
+    <version>6.0.4.0182</version>
     <authors>Fortinet</authors>
     <owners>Marcin Bojko</owners>
     <summary>Fortinet AV/APP/IPS/VPN client</summary>
@@ -37,6 +37,9 @@ FortiClient extends the power of FortiGate's Unified threat management to endpoi
 
 ## Changelog
 
+### 2018-12-31 Build 6.0.4.0182 (GA)
+
+* version 6.0.4.0182
 
 ### 2018-11-12 Build 6.0.3.0155 (GA)
 * version 6.0.3.0155
