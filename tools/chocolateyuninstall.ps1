@@ -12,7 +12,7 @@ if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)
 }
 
-$uninstalled = $false
+#$uninstalled = $false
 $local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
 $machine_key   = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
 $machine_key6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
@@ -34,7 +34,7 @@ if ($key.Count -eq 1) {
   write-host $key.Count
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
   Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $_.DisplayName"}
+  $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
 }
 
 
